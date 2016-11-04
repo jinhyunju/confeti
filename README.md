@@ -1,9 +1,13 @@
-## CONfounding Factor Estimation Through Independent Component Analysis (CONFETI)
+## CONfounding Factor Estimation Through Independent Component Analysis (CONFETI) R package
 
 
-# Installation Instructions
+## Installation Instructions
 
-## Dependencies
+### Dependencies
+
+- R package `lrgpr` (lrgpr.r-forge.r-project.org)
+
+- R package `picaplot` (https://github.com/jinhyunju/picaplot)
 
 
 # Usage
