@@ -26,12 +26,26 @@ devtools::install_github("jinhyunju/confeti")
 
 ```
 
+### Note 
+
+A dependency issue is currently being worked out that causes an error in calling the `ica_genotype_test()` function. 
+The temporary work around is to load the package `lrgpr` into the main workspace. I do understand that this is not an optimal solution and apologize for the inconvenience. I am currently trying to fix the issue, but in the mean time please import and attach `lrgpr` before calling the `confeti()` function. 
+
+```r
+
+library("lrgpr")
+
+```
+
+
 ## Usage
+
+
+#### 1) Creating a sample covariance matrix using CONFETI
 
 A confeti sample covariance matrix can be constructed by the function `confeti()`.
 
 You will need two objects in your R environment.
-
 
 - `expr_data` which is an `g x n` expression matrix with `g` gene measurements and `n` samples.
 
@@ -54,4 +68,18 @@ confeti_results = confeti(expr_data, snp_data, return_all = FALSE)
 - `y_star` : Lower dimensional phenotype matrix with candidate genetic effects removed.
 
 
+#### 2) Fitting a linear mixed model using `lrgpr`
+
+After generating a sample covariance matrix using the `confeti()` function you can use it to fit a linear mixed model. 
+For example, to fit an lmm for a single phenotype and single genotype you can use the `lrgpr()` function from the `lrgpr` package.
+
+```r
+
+single_pheno = expr_data[1,]
+
+single_geno = snp_data[1,]
+
+lmm_fit = lrgpr(single_pheno ~ single_geno, decomp = svd(confeti_results$Kmx))
+
+```
 

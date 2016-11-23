@@ -1,11 +1,15 @@
 Package: confeti
 Type: Package
-Title: What the Package Does (Title Case)
+Title: CONfounding Factor Estimation Through Independent component analysis (CONFETI)
 Version: 0.1
 Date: 2016-11-03
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: person("Jin Hyun", "Ju", email = "jinhyun.ju@gmail.com", 
+                  role = c("aut", "cre"))
+Maintainer: Jin Hyun Ju <jinhyun.ju@gmail.com>
+Description: Creating a CONFETI sample covariance matrix for expression quantitative trait loci analysis
+License: GPL-2
 LazyData: TRUE
 RoxygenNote: 5.0.1
+Imports: lrgpr,
+    picaplot,
+    bigmemory

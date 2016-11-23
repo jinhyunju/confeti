@@ -3,6 +3,6 @@
 export(confeti)
 export(get_similarity_mx)
 export(ica_genotype_test)
-import(formula.tools)
+import(bigmemory)
 import(lrgpr)
 import(picaplot)

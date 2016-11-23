@@ -21,6 +21,9 @@
 #' @return N x N covariance structure matrix.
 #' @keywords keywords
 #'
+#' @import lrgpr
+#' @import picaplot
+#' @import bigmemory
 #' @export
 confeti <- function(expr_data, snp_data, return_all = TRUE,
                     cores = 1,
@@ -31,7 +34,7 @@ confeti <- function(expr_data, snp_data, return_all = TRUE,
                     threshold = 0.05,
                     return_pval = FALSE){
 
-    ica_object = run_ica(pheno_mx = expr_data,
+    ica_object = picaplot::run_ica(pheno_mx = expr_data,
                          k_est = k,
                          var_cutoff = var_cutoff,
                          n_runs = ica_runs,
@@ -70,8 +73,7 @@ confeti <- function(expr_data, snp_data, return_all = TRUE,
 #'
 #' @import lrgpr
 #' @import picaplot
-#'
-#' @import formula.tools
+#' @import bigmemory
 #' @export
 ica_genotype_test <- function(ica_object,
                               genotype_mx,
