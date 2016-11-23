@@ -29,7 +29,7 @@ devtools::install_github("jinhyunju/confeti")
 ### Note 
 
 A dependency issue is currently being worked out that causes an error in calling the `ica_genotype_test()` function. 
-The temporary work around is to load the package `lrgpr` into the main workspace with `confeti`. I do understand that this is not an optimal solution and apologize for the inconvenience. I am currently trying to fix the issue, but in the mean time `lrgpr` will be listed in the `Depends` field in the DESCRIPTION file. 
+The temporary work around is to load the package `lrgpr` into the main workspace with `confeti`. I do understand that this is not an optimal solution and apologize for the inconvenience. I am currently trying to fix the issue, but in the mean time `lrgpr` will be listed in the `Depends` field in the DESCRIPTION file, which automatically loads `lrgpr` when `confeti` is loaded. 
 
 
 ## Usage
