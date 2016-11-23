@@ -10,6 +10,7 @@ Description: Creating a CONFETI sample covariance matrix for expression quantita
 License: GPL-2
 LazyData: TRUE
 RoxygenNote: 5.0.1
+Depends: lrgpr
 Imports: lrgpr,
     picaplot,
     bigmemory
