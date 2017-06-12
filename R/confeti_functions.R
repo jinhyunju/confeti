@@ -34,7 +34,7 @@ confeti <- function(expr_data, snp_data, return_all = TRUE,
                     threshold = 0.05,
                     return_pval = FALSE){
 
-    ica_object = picaplot::run_ica(pheno_mx = expr_data,
+    ica_object = picaplot::runICA(pheno_mx = expr_data,
                          k_est = k,
                          var_cutoff = var_cutoff,
                          n_runs = ica_runs,
